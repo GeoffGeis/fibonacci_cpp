@@ -2,7 +2,7 @@
 using namespace std;
 
 class Fib {
-  int n, c, first, second, next;
+  int n,first, second;
 public:
   Fib() {
     first = 0;
@@ -13,9 +13,10 @@ public:
   }
 
   int solve() {
-    for(c = 0 ; c < n ; c++) {
-      if(c <= 1) {
-        next = c;
+    int i, next;
+    for(i = 0 ; i < n ; i++) {
+      if(i <= 1) {
+        next = i;
       }
       else {
         next = first + second;
