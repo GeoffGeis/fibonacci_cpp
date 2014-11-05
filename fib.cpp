@@ -2,19 +2,20 @@
 using namespace std;
 
 class Fib {
-  int n,first, second;
+  int n, first, second;
 public:
   Fib() {
     first = 0;
     second = 1;
     cout << "Enter the number of terms of Fibonacci series you want" << endl;
     cin >> n;
-    cout << "First " << n << " terms of Fibonacci series are :" << endl;
+    cout << "First " << n << " terms of Fibonacci series are:" << endl;
   }
 
   int solve() {
-    int i, next;
-    for(i = 0 ; i < n ; i++) {
+    int i; 
+    long unsigned int next;
+    for(i = 0 ; i < n + 1 ; i++) {
       if(i <= 1) {
         next = i;
       }
@@ -23,8 +24,8 @@ public:
         first = second;
         second = next;
       }
-      cout << next << endl;
     }
+    return next;
   }
 };
 
