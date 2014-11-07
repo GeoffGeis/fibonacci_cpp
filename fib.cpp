@@ -2,7 +2,8 @@
 using namespace std;
 
 class Fib {
-  int n, first, second;
+  int n; 
+  long unsigned int first, second;
 public:
   Fib() {
     first = 0;
