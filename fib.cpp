@@ -1,13 +1,11 @@
 #include <iostream>
+#include <gmpxx.h>
 using namespace std;
 
 class Fib {
   int n; 
-  long unsigned int first, second;
 public:
   Fib() {
-    first = 0;
-    second = 1;
     cout << "Enter the number of terms of Fibonacci series you want" << endl;
     cin >> n;
     cout << "First " << n << " terms of Fibonacci series are:" << endl;
@@ -15,7 +13,9 @@ public:
 
   int solve() {
     int i; 
-    long unsigned int next;
+    mpz_class first, second, next;
+    first = 0;
+    second = 1;
     for(i = 0 ; i < n + 1 ; i++) {
       if(i <= 1) {
         next = i;
@@ -26,12 +26,12 @@ public:
         second = next;
       }
     }
-    return next;
+    cout << next << endl;
   }
 };
 
 int main() {
   Fib fib;
-  cout << fib.solve() << endl;
+  fib.solve();
   return 0; 
 }
