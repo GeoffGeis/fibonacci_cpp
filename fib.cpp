@@ -8,7 +8,7 @@ public:
   Fib() {
     cout << "Enter the number of terms of Fibonacci series you want" << endl;
     cin >> n;
-    cout << "First " << n << " terms of Fibonacci series are:" << endl;
+    cout << n << "'st Fibonacci number is:" << endl;
   }
 
   void solve() {
