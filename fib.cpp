@@ -11,7 +11,7 @@ public:
     cout << "First " << n << " terms of Fibonacci series are:" << endl;
   }
 
-  int solve() {
+  void solve() {
     int i; 
     mpz_class first, second, next;
     first = 0;
